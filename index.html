@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 手机适配 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高速堵车限定小惊喜✨</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{
+            width:100vw;height:100vh;
+            background:#050510;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .msg{
+            font-size:clamp(26px,7vw,42px);
+            /* 换字体：温柔文艺思源黑体，手机都能正常显示 */
+            font-family:"Source Han Sans SC", "PingFang SC", sans-serif;
+            font-weight:500;
+            color:#87CEFA;
+            text-align:center;
+            animation: jump 1.2s ease-in-out infinite alternate, shine 2s infinite;
+        }
+        .heart{
+            font-size:80px;
+            margin-top:30px;
+            color:#87CEFA;
+            animation: beat 1.4s ease-in-out infinite;
+        }
+        /* 缓慢上下跳动，不会太快晃眼 */
+        @keyframes jump{
+            from{transform: translateY(0px);}
+            to{transform: translateY(-12px);}
+        }
+        /* 柔和闪光，不刺眼 */
+        @keyframes shine{
+            0%{text-shadow:0 0 4px #87CEFA,0 0 8px #add8e6;}
+            50%{text-shadow:0 0 12px #b0e0e6,0 0 24px #87CEFA;}
+            100%{text-shadow:0 0 4px #87CEFA,0 0 8px #add8e6;}
+        }
+        /* 爱心缓慢搏动，模拟心跳 */
+        @keyframes beat{
+            0%{transform: scale(1);}
+            50%{transform: scale(1.12);}
+            100%{transform: scale(1);}
+        }
+    </style>
+</head>
+<body>
+    <div class="msg">高速堵车限定小惊喜<br>男朋友，辛苦啦✨<br>小徐同学，要天天开心哦</div>
+    <div class="heart">♥</div>
+</body>
+</html>
